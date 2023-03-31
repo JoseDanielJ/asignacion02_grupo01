@@ -9,7 +9,16 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      animation: {
+        'ren': 'ren 1s linear 1',
+      },
+      keyframes: {
+        ren: {
+          '100%': { transform: 'translateY(-2rem)' },
+        }
+      }
+    },
     screens: {
       '2xl': {'max': '1535px'},
       // => @media (max-width: 1535px) { ... }
