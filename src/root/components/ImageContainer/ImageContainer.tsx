@@ -6,7 +6,7 @@ interface SrcImage {
    altInfo: string
 }
 
-const ImgContainer = ({ srcInfo, altInfo }: SrcImage) => {
+const ImageContainer = ({ srcInfo, altInfo }: SrcImage) => {
       const [isHide,setHide] = useState<boolean>(false)
       
       const hideElement=()=>{
@@ -22,8 +22,7 @@ const ImgContainer = ({ srcInfo, altInfo }: SrcImage) => {
             {isHide?null:<p className=' absolute -top-4 animate-ren text-base font-mono' >Render...</p>}
              <Image className=" h-4/5 w-4/5" src={srcInfo} alt={altInfo} width={500} height={500} unoptimized/>
          </div>
-        
       )
 }
 
-export default React.memo(ImgContainer)
+export default React.memo(ImageContainer)
